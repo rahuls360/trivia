@@ -21,7 +21,13 @@ class App extends Component {
           <h1 className="text-center">Welcome to Trivia</h1>
           {this.state.data.map((singleQuestionData, index) => {
             return (
-              <Question question={singleQuestionData.question} key={index} />
+              <Question
+                question={singleQuestionData.question}
+                key={index}
+                index={index}
+                incorrect_answers={singleQuestionData.incorrect_answers}
+                correct_answer={singleQuestionData.correct_answer}
+              />
             );
           })}
         </div>

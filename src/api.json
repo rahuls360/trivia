@@ -1,1 +1,74 @@
-{"response_code":0,"results":[{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"Where is the train station &quot;Llanfair&shy;pwllgwyngyll&shy;gogery&shy;chwyrn&shy;drobwll&shy;llan&shy;tysilio&shy;gogo&shy;goch&quot;?","correct_answer":"Wales","incorrect_answers":["Moldova","Czech Republic","Denmark"]},{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"Area 51 is located in which US state?","correct_answer":"Nevada","incorrect_answers":["Arizona","New Mexico","Utah"]},{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"What alcoholic drink is made from molasses?","correct_answer":"Rum","incorrect_answers":["Gin","Vodka","Whisky"]},{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"What geometric shape is generally used for stop signs?","correct_answer":"Octagon","incorrect_answers":["Hexagon","Circle","Triangle"]},{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"What is the shape of the toy invented by Hungarian professor Ern\u0151 Rubik?","correct_answer":"Cube","incorrect_answers":["Sphere","Cylinder","Pyramid"]},{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"How many colors are there in a rainbow?","correct_answer":"7","incorrect_answers":["8","9","10"]},{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"Who is depicted on the US hundred dollar bill?","correct_answer":"Benjamin Franklin","incorrect_answers":["George Washington","Abraham Lincoln","Thomas Jefferson"]},{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"What do the letters of the fast food chain KFC stand for?","correct_answer":"Kentucky Fried Chicken","incorrect_answers":["Kentucky Fresh Cheese","Kibbled Freaky Cow","Kiwi Food Cut"]},{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"What was the first ever London Underground line to be built?","correct_answer":"Metropolitan Line","incorrect_answers":["Circle Line","Bakerloo Line","Victoria Line"]},{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"In which fast food chain can you order a Jamocha Shake?","correct_answer":"Arby&#039;s","incorrect_answers":["McDonald&#039;s","Burger King","Wendy&#039;s"]}]}
+{
+  "response_code": 0,
+  "results": [{
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Where is the train station?",
+    "correct_answer": "Wales",
+    "incorrect_answers": ["Moldova", "Czech Republic", "Denmark"]
+  }, {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Area 51 is located in which US state?",
+    "correct_answer": "Nevada",
+    "incorrect_answers": ["Arizona", "New Mexico", "Utah"]
+  }, {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What alcoholic drink is made from molasses?",
+    "correct_answer": "Rum",
+    "incorrect_answers": ["Gin", "Vodka", "Whisky"]
+  }, {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What geometric shape is generally used for stop signs?",
+    "correct_answer": "Octagon",
+    "incorrect_answers": ["Hexagon", "Circle", "Triangle"]
+  }, {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What is the shape of the toy invented by Hungarian professor Ern\u0151 Rubik?",
+    "correct_answer": "Cube",
+    "incorrect_answers": ["Sphere", "Cylinder", "Pyramid"]
+  }, {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "How many colors are there in a rainbow?",
+    "correct_answer": "7",
+    "incorrect_answers": ["8", "9", "10"]
+  }, {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who is depicted on the US hundred dollar bill?",
+    "correct_answer": "Benjamin Franklin",
+    "incorrect_answers": ["George Washington", "Abraham Lincoln", "Thomas Jefferson"]
+  }, {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What do the letters of the fast food chain KFC stand for?",
+    "correct_answer": "Kentucky Fried Chicken",
+    "incorrect_answers": ["Kentucky Fresh Cheese", "Kibbled Freaky Cow", "Kiwi Food Cut"]
+  }, {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What was the first ever London Underground line to be built?",
+    "correct_answer": "Metropolitan Line",
+    "incorrect_answers": ["Circle Line", "Bakerloo Line", "Victoria Line"]
+  }, {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "In which fast food chain can you order a Jamocha Shake?",
+    "correct_answer": "Arby&#039;s",
+    "incorrect_answers": ["McDonald&#039;s", "Burger King", "Wendy&#039;s"]
+  }]
+}
