@@ -1,0 +1,23 @@
+ul,
+li {
+  list-style: none;
+}
+
+.option {
+  background-color: #f3f3f3;
+  padding: 6px 6px 6px 6px;
+  border: 1px solid #555;
+  font-size: 1.6em;
+  margin: 2px 0;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.option span {
+  margin-right: 25px;
+}
+
+.option:hover {
+  background: #0971B2;
+  color: #f3f3f3;
+}
