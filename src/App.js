@@ -11,7 +11,21 @@ if (typeof window !== "undefined") {
 
 class App extends Component {
   state = {
-    data: data.results
+    data: data.results,
+    scores: Array(data.results.length).fill(0)
+  };
+
+  updateScore = id => {
+    const scores = this.state.scores;
+    scores[id] = 1;
+    this.setState({ scores: scores });
+  };
+
+  calculateResult = () => {
+    let sum = this.state.scores.reduce((result, score) => {
+      return result + score;
+    }, 0);
+    console.log(sum);
   };
 
   render() {
@@ -27,9 +41,11 @@ class App extends Component {
                 index={index}
                 incorrect_answers={singleQuestionData.incorrect_answers}
                 correct_answer={singleQuestionData.correct_answer}
+                updateScore={this.updateScore}
               />
             );
           })}
+          <button onClick={this.calculateResult}>View Results</button>
         </div>
       </div>
     );

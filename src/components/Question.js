@@ -8,11 +8,17 @@ class Question extends React.Component {
   handleClick = index => {
     const active = [false, false, false, false];
     active[index] = true;
+    if (this.options[index] === this.props.correct_answer) {
+      console.log("Correct");
+      this.props.updateScore(this.props.index);
+    } else {
+      console.log("Wrong");
+    }
     this.setState({ active: active });
   };
 
   render() {
-    let options = [...this.props.incorrect_answers, this.props.correct_answer];
+    this.options = [...this.props.incorrect_answers, this.props.correct_answer];
 
     const optionLetters = ["A", "B", "C", "D"];
 
@@ -22,7 +28,7 @@ class Question extends React.Component {
           Q{this.props.index + 1} {this.props.question}
         </h3>
         <ul>
-          {options.map((option, index) => {
+          {this.options.map((option, index) => {
             return (
               <li
                 className={
