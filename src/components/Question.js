@@ -1,9 +1,18 @@
 import React from "react";
 
 class Question extends React.Component {
+  state = {
+    active: [false, false, false, false]
+  };
+
+  handleClick = index => {
+    const active = [false, false, false, false];
+    active[index] = true;
+    this.setState({ active: active });
+  };
+
   render() {
-    const options = this.props.incorrect_answers;
-    options.push(this.props.correct_answer);
+    let options = [...this.props.incorrect_answers, this.props.correct_answer];
 
     const optionLetters = ["A", "B", "C", "D"];
 
@@ -15,7 +24,13 @@ class Question extends React.Component {
         <ul>
           {options.map((option, index) => {
             return (
-              <li className="option">
+              <li
+                className={
+                  this.state.active[index] ? "option selected" : "option"
+                }
+                onClick={() => this.handleClick(index)}
+                key={`option${index}`}
+              >
                 <span>{optionLetters[index]})</span>
                 {option}
               </li>

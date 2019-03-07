@@ -17,7 +17,17 @@ li {
   margin-right: 25px;
 }
 
-.option:hover {
+.option:hover,
+.selected {
   background: #0971B2;
   color: #f3f3f3;
+}
+
+.question h3 {
+  background: #fff796;
+  padding: 6px 12px;
+  border: 1px solid #555;
+  font-size: 1.6em;
+  line-height: 1.6em;
+  border-radius: 2px;
 }
