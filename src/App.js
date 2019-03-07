@@ -19,7 +19,11 @@ class App extends Component {
       <div className="container">
         <div className="row">
           <h1 className="text-center">Welcome to Trivia</h1>
-          <Question />
+          {this.state.data.map((singleQuestionData, index) => {
+            return (
+              <Question question={singleQuestionData.question} key={index} />
+            );
+          })}
         </div>
       </div>
     );
