@@ -54,7 +54,7 @@ class App extends Component {
         <div className="text-center">
           <h4>Score: {this.sum} corrent answers</h4>
           <a href="/" className="btn btn-warning results">
-            Retake Test
+            Play Again
           </a>
         </div>
       );
