@@ -12,7 +12,8 @@ if (typeof window !== "undefined") {
 class App extends Component {
   state = {
     data: data.results,
-    scores: Array(data.results.length).fill(0)
+    scores: Array(data.results.length).fill(0),
+    testFlag: false
   };
 
   updateScore = id => {
@@ -22,13 +23,29 @@ class App extends Component {
   };
 
   calculateResult = () => {
-    let sum = this.state.scores.reduce((result, score) => {
+    this.sum = this.state.scores.reduce((result, score) => {
       return result + score;
     }, 0);
-    console.log(sum);
+    this.setState({ testFlag: true });
+    console.log(this.sum);
   };
 
   render() {
+    let resultsButton = (
+      <button onClick={this.calculateResult} className="btn btn-info results">
+        View Results
+      </button>
+    );
+    if (this.state.testFlag) {
+      resultsButton = (
+        <div className="text-center">
+          <h4>Score: {this.sum} corrent answers</h4>
+          <a href="/" className="btn btn-warning results">
+            Retake Test
+          </a>
+        </div>
+      );
+    }
     return (
       <div className="container">
         <div className="row">
@@ -45,12 +62,7 @@ class App extends Component {
               />
             );
           })}
-          <button
-            onClick={this.calculateResult}
-            className="btn btn-info results"
-          >
-            View Results
-          </button>
+          {resultsButton}
         </div>
       </div>
     );
