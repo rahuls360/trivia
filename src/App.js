@@ -45,7 +45,12 @@ class App extends Component {
               />
             );
           })}
-          <button onClick={this.calculateResult}>View Results</button>
+          <button
+            onClick={this.calculateResult}
+            className="btn btn-info results"
+          >
+            View Results
+          </button>
         </div>
       </div>
     );
