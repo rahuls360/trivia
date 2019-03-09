@@ -43,3 +43,13 @@ a.results {
 a.results {
   display: inline-block;
 }
+
+.wrong {
+  background: red;
+  color: #f3f3f3;
+}
+
+.correct {
+  background: green;
+  color: #f3f3f3;
+}

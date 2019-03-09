@@ -59,6 +59,7 @@ class App extends Component {
                 incorrect_answers={singleQuestionData.incorrect_answers}
                 correct_answer={singleQuestionData.correct_answer}
                 updateScore={this.updateScore}
+                testFlag={this.state.testFlag}
               />
             );
           })}

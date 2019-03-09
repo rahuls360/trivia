@@ -10,10 +10,10 @@ class Question extends React.Component {
     const active = [false, false, false, false];
     active[index] = true;
     if (this.options[index] === this.props.correct_answer) {
-      console.log("Correct");
+      this.answerIsCorrect = true;
       this.props.updateScore(this.props.index);
     } else {
-      console.log("Wrong");
+      this.answerIsCorrect = false;
     }
     this.setState({ active: active });
   };
@@ -39,11 +39,34 @@ class Question extends React.Component {
 
     const optionLetters = ["A", "B", "C", "D"];
 
-    return (
-      <div className="question">
-        <h3>
-          Q{this.props.index + 1} {this.props.question}
-        </h3>
+    let optionsJSX;
+    if (this.props.testFlag) {
+      optionsJSX = (
+        <ul>
+          {this.options.map((option, index) => {
+            return (
+              <li
+                className={
+                  this.state.active[index] && this.answerIsCorrect
+                    ? "option correct"
+                    : this.state.active[index] && !this.answerIsCorrect
+                    ? "option wrong"
+                    : this.options[index] === this.props.correct_answer
+                    ? "option correct"
+                    : "option"
+                }
+                onClick={() => this.handleClick(index)}
+                key={`option${index}`}
+              >
+                <span>{optionLetters[index]})</span>
+                {option}
+              </li>
+            );
+          })}
+        </ul>
+      );
+    } else {
+      optionsJSX = (
         <ul>
           {this.options.map((option, index) => {
             return (
@@ -60,6 +83,15 @@ class Question extends React.Component {
             );
           })}
         </ul>
+      );
+    }
+
+    return (
+      <div className="question">
+        <h3>
+          Q{this.props.index + 1} {this.props.question}
+        </h3>
+        {optionsJSX}
       </div>
     );
   }
