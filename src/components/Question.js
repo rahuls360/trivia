@@ -2,7 +2,8 @@ import React from "react";
 
 class Question extends React.Component {
   state = {
-    active: [false, false, false, false]
+    active: [false, false, false, false],
+    initialLoadFlag: true
   };
 
   handleClick = index => {
@@ -17,8 +18,24 @@ class Question extends React.Component {
     this.setState({ active: active });
   };
 
+  shuffleArray = array => {
+    for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array;
+  };
+
   render() {
-    this.options = [...this.props.incorrect_answers, this.props.correct_answer];
+    if (this.state.initialLoadFlag) {
+      this.options = this.shuffleArray([
+        ...this.props.incorrect_answers,
+        this.props.correct_answer
+      ]);
+      this.setState({ initialLoadFlag: false });
+    }
 
     const optionLetters = ["A", "B", "C", "D"];
 
