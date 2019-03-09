@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import data from "./api.json";
+import Axios from "axios";
 
 //import bootstrap
 import "bootstrap/dist/css/bootstrap.css";
@@ -11,10 +12,22 @@ if (typeof window !== "undefined") {
 
 class App extends Component {
   state = {
-    data: data.results,
+    data: [],
     scores: Array(data.results.length).fill(0),
     testFlag: false
   };
+
+  componentDidMount() {
+    Axios.get(
+      "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
+    )
+      .then(data => {
+        this.setState({ data: data.data.results });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
 
   updateScore = id => {
     const scores = this.state.scores;
